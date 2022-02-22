@@ -193,49 +193,191 @@
                         whitespace-nowrap
                       "
                     >
-                      <div class="flex">
-                        <a
-                          :href="transaction.href"
-                          class="inline-flex space-x-2 text-sm truncate group"
-                        >
-                          <CashIcon
-                            class="
-                              flex-shrink-0
-                              w-5
-                              h-5
-                              text-gray-400
-                              group-hover:text-gray-500
-                            "
-                            aria-hidden="true"
-                          />
-                          <p
-                            class="
-                              text-gray-500
-                              truncate
-                              group-hover:text-gray-900
-                            "
-                          >
-                            {{ transaction.name }}
-                          </p>
-                        </a>
-                      </div>
                       <div
                         class="
-                          mt-3
-                          sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center
-                          group-hover:visible
+                          justify-between
+                          p-2
+                          sm:px-6
+                          lg:px-8
+                          sm:py-3
+                          lg:py-4
+                          sm:flex
+                          group
                         "
                       >
-                        <XFormSmallButton
+                        <div class="flex items-center space-x-1 sm:mr-6">
+                          <div class="w-4 my-2">11</div>
+                          <div class="flex-shrink-0 mb-4 sm:mb-0">
+                            <img
+                              class="
+                                w-16
+                                h-16
+                                text-gray-300
+                                bg-white
+                                border border-gray-300
+                                rounded-sm
+                              "
+                              src="http://metro.test/storage/1/blob"
+                              alt="article"
+                            />
+                          </div>
+                        </div>
+
+                        <div
                           class="
-                            text-white
-                            bg-blue-600
-                            hover:bg-blue-700
-                            focus:ring-blue-500
+                            flex flex-wrap
+                            items-center
+                            justify-between
+                            w-full
                           "
                         >
-                          Edit
-                        </XFormSmallButton>
+                          <div class="w-full mb-2 md:w-4/12">
+                            <a href="#">
+                              <h2
+                                class="
+                                  text-base
+                                  font-medium
+                                  leading-none
+                                  text-gray-700
+                                "
+                                style="
+                                  display: -webkit-box;
+                                  -webkit-line-clamp: 3;
+                                  -webkit-box-orient: vertical;
+                                  overflow: hidden;
+                                "
+                              >
+                                পার্বত্য চট্টগ্রামে পরিত্যক্ত সেনাক্যাম্পে পুলিশ
+                                থাকবে: স্বরাষ্ট্রমন্ত্রী 11
+                              </h2>
+                            </a>
+                            <div class="flex items-center">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                class="w-4 h-4 mr-1 text-gray-500"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                              <div class="text-sm text-gray-500">User</div>
+                            </div>
+                            <div class="flex items-center mt-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                class="w-4 h-4 mr-1 text-gray-500"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                ></path>
+                              </svg>
+                              <div class="text-sm text-gray-500">
+                                Mon, Jan 17, 2022 5:36 PM
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="w-full md:w-4/12">
+                            <a
+                              href="#"
+                              class="
+                                inline-block
+                                px-1
+                                mr-1
+                                text-gray-500
+                                bg-white
+                                border border-gray-300
+                                rounded
+                              "
+                            >
+                              Books Literature
+                            </a>
+                            <a
+                              href="#"
+                              class="
+                                inline-block
+                                px-1
+                                mr-1
+                                text-gray-500
+                                bg-white
+                                border border-gray-300
+                                rounded
+                              "
+                            >
+                              Miscellaneous
+                            </a>
+                          </div>
+
+                          <div
+                            class="
+                              w-full
+                              transition-opacity
+                              duration-200
+                              opacity-100
+                              md:w-4/12
+                              group-hover:opacity-100
+                            "
+                          >
+                            <div class="flex items-center space-x-2">
+                              <a
+                                href="http://metro.test/admin/articles/11/edit"
+                                class="
+                                  inline-flex
+                                  items-center
+                                  justify-center
+                                  px-2
+                                  py-1
+                                  text-sm
+                                  tracking-widest
+                                  text-white
+                                  uppercase
+                                  transition
+                                  bg-blue-600
+                                  border border-transparent
+                                  rounded-md
+                                  hover:bg-blue-500
+                                  focus:outline-none
+                                  focus:border-blue-700
+                                  focus:ring
+                                  focus:ring-blue-200
+                                  active:bg-blue-600
+                                  disabled:opacity-25
+                                "
+                                >Edit</a
+                              >
+                              <XFormSmallButton
+                                class="
+                                  text-white
+                                  bg-red-600
+                                  hover:bg-red-700
+                                  focus:ring-red-500
+                                "
+                              >
+                                Delete
+                              </XFormSmallButton>
+                              <XFormSmallButton
+                                class="
+                                  text-white
+                                  bg-green-600
+                                  hover:bg-green-700
+                                  focus:ring-green-500
+                                "
+                              >
+                                View
+                              </XFormSmallButton>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </td>
                     <td
@@ -246,10 +388,7 @@
                         whitespace-nowrap
                       "
                     >
-                      <span class="font-medium text-gray-900"
-                        >{{ transaction.amount }}
-                      </span>
-                      {{ transaction.currency }}
+                      dkfldk
                     </td>
                     <td
                       class="
