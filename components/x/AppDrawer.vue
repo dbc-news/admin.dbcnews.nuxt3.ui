@@ -1,9 +1,9 @@
 <template>
-  <TransitionRoot as="template" @click="toggleDrawer()" :show="sidebarOpen">
+  <TransitionRoot as="template" @click="closeDrawer" :show="sidebarOpen">
     <Dialog
       as="div"
       class="fixed inset-0 z-40 flex lg:hidden"
-      @close="sidebarOpen = false"
+      @close="closeDrawer"
     >
       <TransitionChild
         as="template"
@@ -26,7 +26,15 @@
         leave-to="-translate-x-full"
       >
         <div
-          class="relative flex flex-col flex-1 w-full max-w-xs pt-5 pb-4  bg-cyan-700"
+          class="
+            relative
+            flex flex-col flex-1
+            w-full
+            max-w-xs
+            pt-5
+            pb-4
+            bg-cyan-700
+          "
         >
           <TransitionChild
             as="template"
@@ -40,8 +48,20 @@
             <div class="absolute top-0 right-0 pt-2 -mr-12">
               <button
                 type="button"
-                class="flex items-center justify-center w-10 h-10 ml-1 rounded-full  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                @click="sidebarOpen = false"
+                class="
+                  flex
+                  items-center
+                  justify-center
+                  w-10
+                  h-10
+                  ml-1
+                  rounded-full
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-inset
+                  focus:ring-white
+                "
+                @click="closeDrawer"
               >
                 <span class="sr-only">Close sidebar</span>
                 <XIcon class="w-6 h-6 text-white" aria-hidden="true" />
@@ -56,7 +76,13 @@
             />
           </div>
           <nav
-            class="flex-shrink-0 h-full mt-5 overflow-y-auto divide-y  divide-cyan-800"
+            class="
+              flex-shrink-0
+              h-full
+              mt-5
+              overflow-y-auto
+              divide-y divide-cyan-800
+            "
             aria-label="Sidebar"
           >
             <div class="px-2 space-y-1">
@@ -86,7 +112,18 @@
                   v-for="item in secondaryNavigation"
                   :key="item.name"
                   :href="item.href"
-                  class="flex items-center px-2 py-2 text-base font-medium rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+                  class="
+                    flex
+                    items-center
+                    px-2
+                    py-2
+                    text-base
+                    font-medium
+                    rounded-md
+                    group
+                    text-cyan-100
+                    hover:text-white hover:bg-cyan-600
+                  "
                 >
                   <component
                     :is="item.icon"
@@ -183,8 +220,8 @@ export default {
     },
   },
   methods: {
-    toggleDrawer() {
-      console.log("hi");
+    closeDrawer() {
+      this.$emit("closeSidebar");
     },
   },
 };
