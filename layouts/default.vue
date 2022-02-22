@@ -9,13 +9,27 @@
   <div class="min-h-full bg-gray-100">
     <XAppDrawer :sidebarOpen="sidebarOpen" />
     <XAppSidebar />
-    <div class="flex flex-col flex-1 lg:pl-36">
+    <div class="flex flex-col flex-1 lg:pl-60">
       <div
-        class="relative z-10 flex flex-shrink-0 h-16 bg-white border-b border-gray-200  lg:border-none"
+        class="
+          relative
+          z-10
+          flex flex-shrink-0
+          h-16
+          bg-white
+          border-b border-gray-200
+          lg:border-none
+        "
       >
         <button
           type="button"
-          class="px-4 text-gray-400 border-r border-gray-200  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 lg:hidden"
+          class="
+            px-4
+            text-gray-400
+            border-r border-gray-200
+            focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500
+            lg:hidden
+          "
           @click="sidebarOpen = true"
         >
           <span class="sr-only">Open sidebar</span>

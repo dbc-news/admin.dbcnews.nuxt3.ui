@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden lg:flex lg:w-36 lg:flex-col lg:fixed lg:inset-y-0">
+  <div class="hidden lg:flex lg:w-60 lg:flex-col lg:fixed lg:inset-y-0">
     <div class="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto bg-cyan-700">
       <div class="flex items-center flex-shrink-0 px-4">
         <img
