@@ -7,6 +7,79 @@
       breadcrumb="Articles / list"
     />
 
+    <div
+      class="
+        flex flex-wrap
+        items-center
+        justify-between
+        w-full
+        p-2
+        bg-gray-100
+        border-b
+        sm:px-6
+        lg:px-8
+        sm:py-3
+        lg:py-4
+      "
+    >
+      <div class="flex-grow mr-1">
+        <div class="flex mt-1">
+          <div class="relative flex items-stretch flex-grow focus-within:z-10">
+            <XFormInput type="search" placeholder="Search..." />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap">
+        <select
+          id="user"
+          name="user"
+          class="
+            py-2
+            pl-3
+            pr-10
+            mt-1
+            text-base
+            border-gray-300
+            rounded-l-md
+            focus:outline-none
+            sm:text-sm
+            focus:ring-0 focus:border-gray-300
+          "
+        >
+          <option value="">Select User</option>
+          <option value="1">Super Admin</option>
+          <option value="2">User</option>
+        </select>
+
+        <div class="relative inline-block mt-1 text-left">
+          <XMoreFilter />
+        </div>
+
+        <select
+          id="per-page"
+          name="per-page"
+          class="
+            py-2
+            pl-3
+            pr-10
+            mt-1
+            text-base
+            border-gray-300
+            rounded-r-md
+            focus:outline-none
+            sm:text-sm
+            focus:ring-0 focus:border-gray-300
+          "
+        >
+          <option value="">Short</option>
+          <option value="delete">Product title A–Z</option>
+          <option value="delete">Product title Z–A</option>
+          <option value="delete">Created (oldest first)</option>
+          <option value="delete">Updated (oldest first)</option>
+        </select>
+      </div>
+    </div>
+
     <div class="mt-8">
       <div class="">
         <div class="px-4 mx-auto sm:px-6 lg:px-8">
@@ -174,12 +247,13 @@
 </template>
 
 <script>
-import { ClockIcon, UserIcon } from "@heroicons/vue/outline";
+import { ClockIcon, UserIcon, ChevronDownIcon } from "@heroicons/vue/outline";
 
 export default {
   components: {
     UserIcon,
     ClockIcon,
+    ChevronDownIcon,
   },
   setup() {
     return {};
