@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" @click="closeDrawer" :show="sidebarOpen">
+  <TransitionRoot as="template" @click="closeDrawer" :show="drawer">
     <Dialog
       as="div"
       class="fixed inset-0 z-40 flex lg:hidden"
@@ -214,14 +214,14 @@ export default {
     XIcon,
   },
   props: {
-    sidebarOpen: {
+    drawer: {
       type: Boolean,
       default: false,
     },
   },
   methods: {
     closeDrawer() {
-      this.$emit("closeSidebar");
+      this.$emit("closeDrawer");
     },
   },
 };

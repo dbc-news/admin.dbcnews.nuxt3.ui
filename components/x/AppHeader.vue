@@ -1,12 +1,6 @@
 <template>
   <div>
-    <XAppDrawer
-      :sidebarOpen="sidebarOpen"
-      @closeSidebar="sidebarOpen = !sidebarOpen"
-    />
-
-    {{ sidebarOpen }}
-
+    <XAppDrawer :drawer="isOpen" @closeDrawer="isOpen = !isOpen" />
     <div class="flex flex-col flex-1 lg:pl-60">
       <div
         class="
@@ -28,7 +22,7 @@
             focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500
             lg:hidden
           "
-          @click="sidebarOpen = true"
+          @click="isOpen = true"
         >
           <span class="sr-only">Open sidebar</span>
           <MenuAlt1Icon class="w-6 h-6" aria-hidden="true" />
@@ -135,7 +129,7 @@ export default {
     XIcon,
   },
   setup() {
-    const sidebarOpen = ref(false);
+    const isOpen = ref(false);
 
     return {
       navigation,
@@ -143,7 +137,7 @@ export default {
       cards,
       transactions,
       statusStyles,
-      sidebarOpen,
+      isOpen,
     };
   },
 };
