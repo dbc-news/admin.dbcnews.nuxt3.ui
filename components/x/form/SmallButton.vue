@@ -4,8 +4,8 @@
       inline-flex
       items-center
       justify-center
-      px-4
-      py-2
+      px-2
+      py-1
       font-medium
       tracking-wider
       text-center
@@ -19,11 +19,3 @@
     <slot />
   </button>
 </template>
-
-<script>
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  //
-});
-</script>

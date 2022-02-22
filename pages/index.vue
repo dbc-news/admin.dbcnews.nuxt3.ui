@@ -47,19 +47,54 @@
         </ul>
 
         <nav
-          class="flex items-center justify-between px-4 py-3 bg-white border-t border-gray-200 "
+          class="
+            flex
+            items-center
+            justify-between
+            px-4
+            py-3
+            bg-white
+            border-t border-gray-200
+          "
           aria-label="Pagination"
         >
           <div class="flex justify-between flex-1">
             <a
               href="#"
-              class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md  hover:text-gray-500"
+              class="
+                relative
+                inline-flex
+                items-center
+                px-4
+                py-2
+                text-sm
+                font-medium
+                text-gray-700
+                bg-white
+                border border-gray-300
+                rounded-md
+                hover:text-gray-500
+              "
             >
               Previous
             </a>
             <a
               href="#"
-              class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md  hover:text-gray-500"
+              class="
+                relative
+                inline-flex
+                items-center
+                px-4
+                py-2
+                ml-3
+                text-sm
+                font-medium
+                text-gray-700
+                bg-white
+                border border-gray-300
+                rounded-md
+                hover:text-gray-500
+              "
             >
               Next
             </a>
@@ -71,28 +106,72 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8">
           <div class="flex flex-col mt-2">
             <div
-              class="min-w-full overflow-hidden overflow-x-auto align-middle shadow  sm:rounded-lg"
+              class="
+                min-w-full
+                overflow-hidden overflow-x-auto
+                align-middle
+                shadow
+                sm:rounded-lg
+              "
             >
               <table class="min-w-full divide-y divide-gray-200">
                 <thead>
                   <tr>
                     <th
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase  bg-gray-50"
+                      class="
+                        px-6
+                        py-3
+                        text-xs
+                        font-medium
+                        tracking-wider
+                        text-left text-gray-500
+                        uppercase
+                        bg-gray-50
+                      "
                     >
                       Transaction
                     </th>
                     <th
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-right text-gray-500 uppercase  bg-gray-50"
+                      class="
+                        px-6
+                        py-3
+                        text-xs
+                        font-medium
+                        tracking-wider
+                        text-right text-gray-500
+                        uppercase
+                        bg-gray-50
+                      "
                     >
                       Amount
                     </th>
                     <th
-                      class="hidden px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase  bg-gray-50 md:block"
+                      class="
+                        hidden
+                        px-6
+                        py-3
+                        text-xs
+                        font-medium
+                        tracking-wider
+                        text-left text-gray-500
+                        uppercase
+                        bg-gray-50
+                        md:block
+                      "
                     >
                       Status
                     </th>
                     <th
-                      class="px-6 py-3 text-xs font-medium tracking-wider text-right text-gray-500 uppercase  bg-gray-50"
+                      class="
+                        px-6
+                        py-3
+                        text-xs
+                        font-medium
+                        tracking-wider
+                        text-right text-gray-500
+                        uppercase
+                        bg-gray-50
+                      "
                     >
                       Date
                     </th>
@@ -102,10 +181,17 @@
                   <tr
                     v-for="transaction in transactions"
                     :key="transaction.id"
-                    class="bg-white"
+                    class="bg-white hover:bg-gray-100 group"
                   >
                     <td
-                      class="w-full px-6 py-4 text-sm text-gray-900  max-w-0 whitespace-nowrap"
+                      class="
+                        w-full
+                        px-6
+                        py-4
+                        text-sm text-gray-900
+                        max-w-0
+                        whitespace-nowrap
+                      "
                     >
                       <div class="flex">
                         <a
@@ -113,19 +199,52 @@
                           class="inline-flex space-x-2 text-sm truncate group"
                         >
                           <CashIcon
-                            class="flex-shrink-0 w-5 h-5 text-gray-400  group-hover:text-gray-500"
+                            class="
+                              flex-shrink-0
+                              w-5
+                              h-5
+                              text-gray-400
+                              group-hover:text-gray-500
+                            "
                             aria-hidden="true"
                           />
                           <p
-                            class="text-gray-500 truncate  group-hover:text-gray-900"
+                            class="
+                              text-gray-500
+                              truncate
+                              group-hover:text-gray-900
+                            "
                           >
                             {{ transaction.name }}
                           </p>
                         </a>
                       </div>
+                      <div
+                        class="
+                          mt-3
+                          sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center
+                          group-hover:visible
+                        "
+                      >
+                        <XFormSmallButton
+                          class="
+                            text-white
+                            bg-blue-600
+                            hover:bg-blue-700
+                            focus:ring-blue-500
+                          "
+                        >
+                          Edit
+                        </XFormSmallButton>
+                      </div>
                     </td>
                     <td
-                      class="px-6 py-4 text-sm text-right text-gray-500  whitespace-nowrap"
+                      class="
+                        px-6
+                        py-4
+                        text-sm text-right text-gray-500
+                        whitespace-nowrap
+                      "
                     >
                       <span class="font-medium text-gray-900"
                         >{{ transaction.amount }}
@@ -133,7 +252,14 @@
                       {{ transaction.currency }}
                     </td>
                     <td
-                      class="hidden px-6 py-4 text-sm text-gray-500  whitespace-nowrap md:block"
+                      class="
+                        hidden
+                        px-6
+                        py-4
+                        text-sm text-gray-500
+                        whitespace-nowrap
+                        md:block
+                      "
                     >
                       <span
                         :class="[
@@ -145,7 +271,12 @@
                       </span>
                     </td>
                     <td
-                      class="px-6 py-4 text-sm text-right text-gray-500  whitespace-nowrap"
+                      class="
+                        px-6
+                        py-4
+                        text-sm text-right text-gray-500
+                        whitespace-nowrap
+                      "
                     >
                       <time :datetime="transaction.datetime">{{
                         transaction.date
@@ -155,7 +286,16 @@
                 </tbody>
               </table>
               <nav
-                class="flex items-center justify-between px-4 py-3 bg-white border-t border-gray-200  sm:px-6"
+                class="
+                  flex
+                  items-center
+                  justify-between
+                  px-4
+                  py-3
+                  bg-white
+                  border-t border-gray-200
+                  sm:px-6
+                "
                 aria-label="Pagination"
               >
                 <div class="hidden sm:block">
@@ -178,13 +318,40 @@
                 <div class="flex justify-between flex-1 sm:justify-end">
                   <a
                     href="#"
-                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md  hover:bg-gray-50"
+                    class="
+                      relative
+                      inline-flex
+                      items-center
+                      px-4
+                      py-2
+                      text-sm
+                      font-medium
+                      text-gray-700
+                      bg-white
+                      border border-gray-300
+                      rounded-md
+                      hover:bg-gray-50
+                    "
                   >
                     Previous
                   </a>
                   <a
                     href="#"
-                    class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md  hover:bg-gray-50"
+                    class="
+                      relative
+                      inline-flex
+                      items-center
+                      px-4
+                      py-2
+                      ml-3
+                      text-sm
+                      font-medium
+                      text-gray-700
+                      bg-white
+                      border border-gray-300
+                      rounded-md
+                      hover:bg-gray-50
+                    "
                   >
                     Next
                   </a>

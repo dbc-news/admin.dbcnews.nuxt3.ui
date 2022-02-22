@@ -9,20 +9,49 @@
         />
       </div>
       <nav
-        class="flex flex-col flex-1 mt-5 overflow-y-auto divide-y  divide-cyan-800"
+        class="
+          flex flex-col flex-1
+          mt-5
+          overflow-y-auto
+          divide-y divide-cyan-800
+        "
         aria-label="Sidebar"
       >
         <div class="px-2 space-y-1">
           <nuxt-link
             to="/"
-            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+            class="
+              flex
+              items-center
+              px-2
+              py-2
+              text-sm
+              font-medium
+              leading-6
+              rounded-md
+              group
+              text-cyan-100
+              hover:text-white hover:bg-cyan-600
+            "
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Articles
           </nuxt-link>
           <nuxt-link
-            :to="{ name: 'categories' }"
-            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+            :to="{ name: 'category' }"
+            class="
+              flex
+              items-center
+              px-2
+              py-2
+              text-sm
+              font-medium
+              leading-6
+              rounded-md
+              group
+              text-cyan-100
+              hover:text-white hover:bg-cyan-600
+            "
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Categories
@@ -31,7 +60,19 @@
         <div class="pt-6 mt-6">
           <div class="px-2 space-y-1">
             <a
-              class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+              class="
+                flex
+                items-center
+                px-2
+                py-2
+                text-sm
+                font-medium
+                leading-6
+                rounded-md
+                group
+                text-cyan-100
+                hover:text-white hover:bg-cyan-600
+              "
             >
               <CogIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
               Settings

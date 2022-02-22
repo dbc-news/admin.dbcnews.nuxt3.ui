@@ -18,14 +18,28 @@
                   alt=""
                 /> -->
                 <h1
-                  class="text-2xl font-bold leading-7 text-gray-900  sm:leading-9 sm:truncate"
+                  class="
+                    text-2xl
+                    font-bold
+                    leading-7
+                    text-gray-900
+                    sm:leading-9 sm:truncate
+                  "
                 >
                   {{ leading }}
                 </h1>
               </div>
               <dl class="flex mt-1">
                 <dd
-                  class="flex items-center text-sm font-medium text-gray-500 capitalize  sm:mr-6"
+                  class="
+                    flex
+                    items-center
+                    text-sm
+                    font-medium
+                    text-gray-500
+                    capitalize
+                    sm:mr-6
+                  "
                 >
                   <NewspaperIcon
                     class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
@@ -40,12 +54,16 @@
         </div>
         <div class="flex mt-6 space-x-3 md:mt-0 md:ml-4">
           <nuxt-link :to="link()">
-            <button
-              type="button"
-              class="inline-flex items-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm  bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
+            <XFormButton
+              class="
+                text-white
+                bg-cyan-600
+                hover:bg-cyan-700
+                focus:ring-cyan-500
+              "
             >
               {{ trialing }}
-            </button>
+            </XFormButton>
           </nuxt-link>
         </div>
       </div>
