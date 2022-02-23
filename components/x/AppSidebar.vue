@@ -3,76 +3,63 @@
     <div class="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto bg-cyan-700">
       <div class="flex items-center flex-shrink-0 px-4">
         <img
-          class="w-auto h-8"
-          src="https://tailwindui.com/img/logos/easywire-logo-cyan-300-mark-white-text.svg"
+          class="w-auto h-12"
+          src="@/assets/images/dbc-white-logo.svg"
           alt="Easywire logo"
         />
       </div>
       <nav
-        class="
-          flex flex-col flex-1
-          mt-5
-          overflow-y-auto
-          divide-y divide-cyan-800
-        "
+        class="flex flex-col flex-1 mt-5 overflow-y-auto divide-y  divide-cyan-800"
         aria-label="Sidebar"
       >
         <div class="px-2 space-y-1">
           <nuxt-link
             to="/"
-            class="
-              flex
-              items-center
-              px-2
-              py-2
-              text-sm
-              font-medium
-              leading-6
-              rounded-md
-              group
-              text-cyan-100
-              hover:text-white hover:bg-cyan-600
-            "
+            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Articles
           </nuxt-link>
           <nuxt-link
             :to="{ name: 'category' }"
-            class="
-              flex
-              items-center
-              px-2
-              py-2
-              text-sm
-              font-medium
-              leading-6
-              rounded-md
-              group
-              text-cyan-100
-              hover:text-white hover:bg-cyan-600
-            "
+            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Categories
+          </nuxt-link>
+          <nuxt-link
+            :to="{ name: 'category' }"
+            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+          >
+            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            Categories
+          </nuxt-link>
+          <nuxt-link
+            :to="{ name: 'category' }"
+            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+          >
+            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            Topics
+          </nuxt-link>
+          <nuxt-link
+            :to="{ name: 'category' }"
+            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+          >
+            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            Regions
+          </nuxt-link>
+          <nuxt-link
+            :to="{ name: 'category' }"
+            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
+          >
+            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            Tags
           </nuxt-link>
         </div>
         <div class="pt-6 mt-6">
           <div class="px-2 space-y-1">
             <a
-              class="
-                flex
-                items-center
-                px-2
-                py-2
-                text-sm
-                font-medium
-                leading-6
-                rounded-md
-                group
-                text-cyan-100
-                hover:text-white hover:bg-cyan-600
-              "
+              class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
             >
               <CogIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
               Settings
