@@ -17,7 +17,10 @@
             to="/"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
-            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            <NewspaperIcon
+              class="w-6 h-6 mr-4 text-cyan-200"
+              aria-hidden="true"
+            />
             Articles
           </nuxt-link>
 
@@ -25,7 +28,10 @@
             :to="{ name: 'category' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
-            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            <CollectionIcon
+              class="w-6 h-6 mr-4 text-cyan-200"
+              aria-hidden="true"
+            />
             Categories
           </nuxt-link>
 
@@ -33,7 +39,10 @@
             :to="{ name: 'topic' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
-            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            <BookOpenIcon
+              class="w-6 h-6 mr-4 text-cyan-200"
+              aria-hidden="true"
+            />
             Topics
           </nuxt-link>
 
@@ -41,7 +50,10 @@
             :to="{ name: 'region' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
-            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            <LocationMarkerIcon
+              class="w-6 h-6 mr-4 text-cyan-200"
+              aria-hidden="true"
+            />
             Regions
           </nuxt-link>
 
@@ -49,7 +61,7 @@
             :to="{ name: 'tag' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
-            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
+            <TagIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Tags
           </nuxt-link>
         </div>
@@ -69,81 +81,22 @@
 </template>
 
 <script>
-import { ref } from "vue";
 import {
-  Dialog,
-  DialogOverlay,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  TransitionChild,
-  TransitionRoot,
-} from "@headlessui/vue";
-import {
-  BellIcon,
-  ClockIcon,
   CogIcon,
-  CreditCardIcon,
-  DocumentReportIcon,
-  HomeIcon,
-  MenuAlt1Icon,
-  QuestionMarkCircleIcon,
-  ScaleIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
-  XIcon,
+  TagIcon,
+  CollectionIcon,
+  BookOpenIcon,
 } from "@heroicons/vue/outline";
-import {
-  CashIcon,
-  CheckCircleIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  OfficeBuildingIcon,
-  SearchIcon,
-} from "@heroicons/vue/solid";
-
-const navigation = [
-  { name: "Categories", href: "/category", icon: ClockIcon, current: false },
-  { name: "Balances", href: "#", icon: ScaleIcon, current: false },
-  { name: "Cards", href: "#", icon: CreditCardIcon, current: false },
-  { name: "Recipients", href: "#", icon: UserGroupIcon, current: false },
-  { name: "Reports", href: "#", icon: DocumentReportIcon, current: false },
-];
-const secondaryNavigation = [
-  { name: "Help", href: "#", icon: QuestionMarkCircleIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
-];
+import { LocationMarkerIcon, NewspaperIcon } from "@heroicons/vue/solid";
 
 export default {
   components: {
-    Dialog,
-    DialogOverlay,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
-    TransitionChild,
-    TransitionRoot,
-    BellIcon,
-    CashIcon,
-    CheckCircleIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-    MenuAlt1Icon,
-    OfficeBuildingIcon,
-    SearchIcon,
-    XIcon,
-    HomeIcon,
     CogIcon,
-  },
-  setup() {
-    const sidebarOpen = ref(false);
-
-    return {
-      navigation,
-      secondaryNavigation,
-    };
+    TagIcon,
+    LocationMarkerIcon,
+    CollectionIcon,
+    NewspaperIcon,
+    BookOpenIcon,
   },
 };
 </script>

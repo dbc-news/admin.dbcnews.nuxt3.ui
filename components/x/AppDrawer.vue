@@ -26,15 +26,7 @@
         leave-to="-translate-x-full"
       >
         <div
-          class="
-            relative
-            flex flex-col flex-1
-            w-full
-            max-w-xs
-            pt-5
-            pb-4
-            bg-cyan-700
-          "
+          class="relative flex flex-col flex-1 w-full max-w-xs pt-5 pb-4  bg-cyan-700"
         >
           <TransitionChild
             as="template"
@@ -48,19 +40,7 @@
             <div class="absolute top-0 right-0 pt-2 -mr-12">
               <button
                 type="button"
-                class="
-                  flex
-                  items-center
-                  justify-center
-                  w-10
-                  h-10
-                  ml-1
-                  rounded-full
-                  focus:outline-none
-                  focus:ring-2
-                  focus:ring-inset
-                  focus:ring-white
-                "
+                class="flex items-center justify-center w-10 h-10 ml-1 rounded-full  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 @click="closeDrawer"
               >
                 <span class="sr-only">Close sidebar</span>
@@ -76,13 +56,7 @@
             />
           </div>
           <nav
-            class="
-              flex-shrink-0
-              h-full
-              mt-5
-              overflow-y-auto
-              divide-y divide-cyan-800
-            "
+            class="flex-shrink-0 h-full mt-5 overflow-y-auto divide-y  divide-cyan-800"
             aria-label="Sidebar"
           >
             <div class="px-2 space-y-1">
@@ -112,18 +86,7 @@
                   v-for="item in secondaryNavigation"
                   :key="item.name"
                   :href="item.href"
-                  class="
-                    flex
-                    items-center
-                    px-2
-                    py-2
-                    text-base
-                    font-medium
-                    rounded-md
-                    group
-                    text-cyan-100
-                    hover:text-white hover:bg-cyan-600
-                  "
+                  class="flex items-center px-2 py-2 text-base font-medium rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
                 >
                   <component
                     :is="item.icon"
@@ -149,68 +112,20 @@ import { ref } from "vue";
 import {
   Dialog,
   DialogOverlay,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
-import {
-  BellIcon,
-  ClockIcon,
-  CogIcon,
-  CreditCardIcon,
-  DocumentReportIcon,
-  HomeIcon,
-  MenuAlt1Icon,
-  QuestionMarkCircleIcon,
-  ScaleIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
-  XIcon,
-} from "@heroicons/vue/outline";
-import {
-  CashIcon,
-  CheckCircleIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  OfficeBuildingIcon,
-  SearchIcon,
-} from "@heroicons/vue/solid";
+import { CogIcon, HomeIcon, XIcon } from "@heroicons/vue/outline";
 
-const navigation = [
-  { name: "Home", href: "#", icon: HomeIcon, current: true },
-  { name: "History", href: "#", icon: ClockIcon, current: false },
-  { name: "Balances", href: "#", icon: ScaleIcon, current: false },
-  { name: "Cards", href: "#", icon: CreditCardIcon, current: false },
-  { name: "Recipients", href: "#", icon: UserGroupIcon, current: false },
-  { name: "Reports", href: "#", icon: DocumentReportIcon, current: false },
-];
-const secondaryNavigation = [
-  { name: "Settings", href: "#", icon: CogIcon },
-  { name: "Help", href: "#", icon: QuestionMarkCircleIcon },
-  { name: "Privacy", href: "#", icon: ShieldCheckIcon },
-];
+const navigation = [{ name: "Home", href: "#", icon: HomeIcon, current: true }];
+const secondaryNavigation = [{ name: "Settings", href: "#", icon: CogIcon }];
 
 export default {
   components: {
     Dialog,
     DialogOverlay,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuItems,
     TransitionChild,
     TransitionRoot,
-    BellIcon,
-    CashIcon,
-    CheckCircleIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-    MenuAlt1Icon,
-    OfficeBuildingIcon,
-    SearchIcon,
     XIcon,
   },
   props: {
