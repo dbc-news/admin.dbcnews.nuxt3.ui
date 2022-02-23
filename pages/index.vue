@@ -27,9 +27,9 @@
             <div
               class="min-w-full overflow-hidden overflow-x-auto align-middle shadow  sm:rounded-lg"
             >
-              <div class="py-4 bg-white divide-y divide-gray-200">
+              <div class="">
                 <div
-                  class="justify-between p-2  sm:px-6 lg:px-8 sm:py-3 lg:py-4 sm:flex group"
+                  class="items-center justify-between p-2 mb-1 bg-white rounded-md  sm:px-6 lg:px-8 sm:py-3 lg:py-4 sm:flex group"
                   v-for="n in 10"
                   :key="n"
                 >
@@ -75,6 +75,12 @@
                     </div>
 
                     <div class="w-full mb-1 md:w-4/12">
+                      <a
+                        href="#"
+                        class="inline-block px-1 mb-1 mr-1 text-gray-500 bg-white border border-gray-300 rounded "
+                      >
+                        Books Literature
+                      </a>
                       <a
                         href="#"
                         class="inline-block px-1 mb-1 mr-1 text-gray-500 bg-white border border-gray-300 rounded "
