@@ -7,8 +7,13 @@
   
 <template>
   <div class="min-h-full bg-gray-100">
-    <XAppHeader />
-
+    <div class="flex flex-col flex-1 lg:pl-60">
+      <XAppHeader />
+      <main class="flex-1 pb-8">
+        <slot />
+      </main>
+      <!-- <XAppFooter /> -->
+    </div>
     <XAppSidebar />
   </div>
 </template>
