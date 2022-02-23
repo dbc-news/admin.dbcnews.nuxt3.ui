@@ -20,6 +20,7 @@
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Articles
           </nuxt-link>
+
           <nuxt-link
             :to="{ name: 'category' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
@@ -27,29 +28,25 @@
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Categories
           </nuxt-link>
+
           <nuxt-link
-            :to="{ name: 'category' }"
-            class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
-          >
-            <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
-            Categories
-          </nuxt-link>
-          <nuxt-link
-            :to="{ name: 'category' }"
+            :to="{ name: 'topic' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Topics
           </nuxt-link>
+
           <nuxt-link
-            :to="{ name: 'category' }"
+            :to="{ name: 'region' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
             Regions
           </nuxt-link>
+
           <nuxt-link
-            :to="{ name: 'category' }"
+            :to="{ name: 'tag' }"
             class="flex items-center px-2 py-2 text-sm font-medium leading-6 rounded-md  group text-cyan-100 hover:text-white hover:bg-cyan-600"
           >
             <HomeIcon class="w-6 h-6 mr-4 text-cyan-200" aria-hidden="true" />
