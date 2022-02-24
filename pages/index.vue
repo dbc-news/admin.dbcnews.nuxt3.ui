@@ -106,19 +106,22 @@
                         name: 'articles-edit-slug',
                         params: { slug: 'এক-বছরের-মধ্যে-চালু-হচ্ছে-পেনশন' },
                       }"
-                      class="inline-flex items-center justify-center px-2 py-1 font-medium tracking-wider text-center text-white bg-blue-300 border border-transparent rounded-md shadow-sm  text-bases focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-blue-700 focus:ring-blue-500"
+                      class="inline-flex items-center justify-center px-2 py-1 font-medium tracking-wider text-center text-blue-500 transition-all duration-300 ease-in-out bg-blue-200 border border-transparent rounded-md shadow-sm  text-bases focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-blue-300 focus:ring-blue-400 hover:border-blue-400"
                       >Edit
                     </nuxt-link>
                     <XFormSmallButton
-                      class="text-white bg-red-600  hover:bg-red-700 focus:ring-red-500"
+                      class="text-red-500 bg-red-200  hover:bg-red-300 focus:ring-red-400 hover:border-red-400"
                     >
                       Delete
                     </XFormSmallButton>
-                    <XFormSmallButton
-                      class="text-white bg-green-600  hover:bg-green-700 focus:ring-green-500"
-                    >
-                      View
-                    </XFormSmallButton>
+                    <nuxt-link
+                      :to="{
+                        name: 'articles-edit-slug',
+                        params: { slug: 'এক-বছরের-মধ্যে-চালু-হচ্ছে-পেনশন' },
+                      }"
+                      class="inline-flex items-center justify-center px-2 py-1 font-medium tracking-wider text-center text-green-500 transition-all duration-300 ease-in-out bg-green-200 border border-transparent rounded-md shadow-sm  text-bases focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-green-300 focus:ring-green-400 hover:border-green-400"
+                      >View
+                    </nuxt-link>
                   </div>
                 </div>
               </div>

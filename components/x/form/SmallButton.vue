@@ -9,6 +9,9 @@
       font-medium
       tracking-wider
       text-center
+      transition-all
+      duration-300
+      ease-in-out
       border border-transparent
       rounded-md
       shadow-sm
