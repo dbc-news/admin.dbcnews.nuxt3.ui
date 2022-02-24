@@ -1,21 +1,8 @@
 <template>
   <input
-    :type="text"
+    :type="type"
     :placeholder="placeholder"
-    class="
-      flex-grow
-      w-full
-      h-10
-      px-2
-      border border-gray-300
-      rounded-md
-      shadow-sm
-      focus:border-cyan-300
-      focus:ring
-      focus:ring-cyan-200
-      focus:ring-opacity-50
-      focus:outline-none
-    "
+    class="flex-grow w-full h-10 px-2 border border-gray-300 rounded-md shadow-sm  focus:border-cyan-300 focus:ring focus:ring-cyan-200 focus:ring-opacity-50 focus:outline-none"
   />
 </template>
 

@@ -140,34 +140,14 @@
                   <img src="" alt="img" class="" />
                   <button class="mt-3 text-blue-600 underline"></button>
                   <div
-                    class="
-                      flex
-                      justify-center
-                      px-6
-                      pt-5
-                      pb-6
-                      border-2 border-gray-300 border-dashed
-                      rounded-md
-                    "
+                    class="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md "
                   >
                     <div class="space-y-1 text-center">
                       <img src="@/assets/icons/image.svg" alt="svg" />
                       <div class="flex text-sm text-gray-600">
                         <label
                           for="file-upload"
-                          class="
-                            relative
-                            font-medium
-                            text-indigo-600
-                            bg-white
-                            rounded-md
-                            cursor-pointer
-                            hover:text-indigo-500
-                            focus-within:outline-none
-                            focus-within:ring-2
-                            focus-within:ring-offset-2
-                            focus-within:ring-indigo-500
-                          "
+                          class="relative font-medium text-indigo-600 bg-white rounded-md cursor-pointer  hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                         >
                           <span>Upload a file</span>
                           <input
@@ -214,16 +194,40 @@
       <div class="col-span-12 px-2 sm:px-4 lg:px-8">
         <XFormButton
           type="button"
-          class="
-            w-full
-            text-white
-            bg-cyan-600
-            hover:bg-cyan-700
-            focus:ring-cyan-500
-          "
+          class="w-full text-white  bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-500"
           >Submit</XFormButton
         >
       </div>
     </form>
+
+    <editor-content :editor="editor" />
   </div>
 </template>
+
+<script>
+import { Editor, EditorContent } from "@tiptap/vue-3";
+import StarterKit from "@tiptap/starter-kit";
+
+export default {
+  components: {
+    EditorContent,
+  },
+
+  data() {
+    return {
+      editor: null,
+    };
+  },
+
+  mounted() {
+    this.editor = new Editor({
+      content: "<p>I’m running Tiptap with Vue.js. 🎉</p>",
+      extensions: [StarterKit],
+    });
+  },
+
+  beforeUnmount() {
+    this.editor.destroy();
+  },
+};
+</script>

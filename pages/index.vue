@@ -1,5 +1,14 @@
 <template>
   <div class="w-full">
+    <Html lang="en-US">
+      <Head>
+        <Title>Dbc News</Title>
+        <Meta
+          name="description"
+          :content="`DBC News Tv the famous portal of Bangladesh`"
+        />
+      </Head>
+    </Html>
     <XBreadcrumb
       leading="Articles"
       trialing="New Articles"
@@ -28,15 +37,18 @@
           <div class="pb-3">
             <div
               class="items-center justify-between p-2 mb-1 bg-white rounded-md  sm:px-6 lg:px-8 sm:py-3 lg:py-4 sm:flex group"
-              v-for="n in 10"
-              :key="n"
+              v-for="(article, index) in articles.data"
+              :key="article.id"
             >
               <div class="flex items-center space-x-1 sm:mr-6">
-                <div class="w-4 my-2">11</div>
-                <div class="flex-shrink-0 mb-4 sm:mb-0">
+                <div class="w-4 my-2">{{ index + 1 }}</div>
+                <div
+                  class="flex-shrink-0 mb-4 sm:mb-0"
+                  v-if="article.thumbnails"
+                >
                   <img
                     class="w-16 h-16 text-gray-300 bg-white border border-gray-300 rounded-sm "
-                    src="http://metro.test/storage/1/blob"
+                    :src="article.thumbnails.thumb160x84"
                     alt="article"
                   />
                 </div>
@@ -54,39 +66,39 @@
                         overflow: hidden;
                       "
                     >
-                      পার্বত্য চট্টগ্রামে পরিত্যক্ত সেনাক্যাম্পে পুলিশ থাকবে:
-                      স্বরাষ্ট্রমন্ত্রী 11
+                      {{ article.title }}
                     </h2>
                   </a>
                   <div class="flex items-center space-x-1">
                     <UserIcon class="w-4 h-4 text-sm text-gray-500" />
-                    <div class="text-sm text-gray-500">Shakil</div>
+                    <div class="text-sm text-gray-500">
+                      {{ article.user.name }}
+                    </div>
                   </div>
                   <div class="flex items-center mt-1 space-x-1">
                     <ClockIcon class="w-4 h-4 text-sm text-gray-500" />
                     <div class="text-sm text-gray-500">
-                      Mon, Jan 17, 2022 5:36 PM
+                      {{ article.formatted_date_time }}
                     </div>
                   </div>
                 </div>
 
-                <div class="w-full mb-1 md:mb-0 md:w-4/12">
+                <div
+                  class="w-full mb-1 md:mb-0 md:w-4/12"
+                  v-if="article.categories.length"
+                >
                   <a
                     href="#"
                     class="inline-block px-1 mb-1 mr-1 text-gray-500 bg-white border border-gray-300 rounded "
+                    v-for="category in article.categories"
+                    :key="category.id"
                   >
-                    Books Literature
-                  </a>
-                  <a
-                    href="#"
-                    class="inline-block px-1 mb-1 mr-1 text-gray-500 bg-white border border-gray-300 rounded "
-                  >
-                    Books Literature
+                    {{ category.name }}
                   </a>
                 </div>
 
                 <div
-                  class="transition-opacity duration-200 opacity-100  md:opacity-0 group-hover:opacity-100"
+                  class="transition-opacity duration-200 opacity-100  group-hover:opacity-100"
                 >
                   <div class="flex items-center space-x-2">
                     <nuxt-link
@@ -94,7 +106,7 @@
                         name: 'articles-edit-slug',
                         params: { slug: 'এক-বছরের-মধ্যে-চালু-হচ্ছে-পেনশন' },
                       }"
-                      class="inline-flex items-center justify-center px-2 py-1 font-medium tracking-wider text-center text-white bg-blue-600 border border-transparent rounded-md shadow-sm  text-bases focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-blue-700 focus:ring-blue-500"
+                      class="inline-flex items-center justify-center px-2 py-1 font-medium tracking-wider text-center text-white bg-blue-300 border border-transparent rounded-md shadow-sm  text-bases focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-blue-700 focus:ring-blue-500"
                       >Edit
                     </nuxt-link>
                     <XFormSmallButton
@@ -129,8 +141,12 @@ export default {
     ClockIcon,
     ChevronDownIcon,
   },
-  setup() {
-    return {};
-  },
+  setup() {},
 };
+</script>
+
+<script setup>
+const { data: articles } = await useAsyncData("articles", () =>
+  $fetch(`http://admin.test/admin/articles`)
+);
 </script>

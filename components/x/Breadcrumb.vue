@@ -69,7 +69,7 @@ export default {
     },
     href: {
       required: false,
-      type: String,
+      type: Object,
       default: null,
     },
     breadcrumb: {
