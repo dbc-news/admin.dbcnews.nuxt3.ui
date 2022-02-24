@@ -6,6 +6,7 @@
       :href="{ name: 'index' }"
       breadcrumb="Articles / Edit"
     />
+
     <form action="">
       <div class="grid grid-cols-12 gap-6 px-2 mt-8 sm:px-4 lg:px-8">
         <div class="col-span-12 2md:col-span-8">
@@ -13,7 +14,11 @@
             <div class="flex flex-wrap">
               <div class="w-full px-2 py-4 md:w-6/12">
                 <XFormLabel>Title</XFormLabel>
-                <XFormInput placeholder="Title" type="text" />
+                <XFormInput
+                  fieldName="form.title"
+                  placeholder="Title"
+                  type="text"
+                />
                 <XFormInputError>The title field is required</XFormInputError>
               </div>
               <div class="w-full px-2 py-4 md:w-6/12">
@@ -199,5 +204,48 @@
         >
       </div>
     </form>
+    {{ form.data }}
+    <!-- {{ $route.params.slug }} -->
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        title: "",
+        description: "",
+        category: "",
+        topic: "",
+        status: "",
+        pinned: "",
+        thumbnail: "",
+        tags: "",
+        area: "",
+      },
+    };
+  },
+  mounted() {},
+};
+</script>
+
+<script setup>
+const route = useRoute();
+// const { data: form } = await useAsyncData(
+//   "form",
+//   () => $fetch(`http://admin.test/admin/articles/${route.params.slug}`),
+//   {
+//     defer: true,
+//   }
+// );
+
+const { data: form } = await useFetch(
+  `http://admin.test/admin/articles/${route.params.slug}`
+  // {
+  //    defer: true,
+  //    pick: ["title", "description", "category", "topic", "status", "pinned", "thumbnail", "tags", "area"],
+  // }
+);
+// console.log(form.data);
+this.form.title = this.form.data.title;
+</script>
